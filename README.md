@@ -22,3 +22,13 @@ A lightweight automation tool built with **FastAPI** that can **like** and **com
 ```bash
 git clone https://github.com/LFGHcoder/Projects.git
 cd Projects
+### 2) Create a virtualenv & install
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+# 3) Create your .env from template
+cp .env.example .env   # Windows: copy .env.example .env
+
+# 4) Run the API
+uvicorn src.app:app --reload
+# then open http://127.0.0.1:8000/health
